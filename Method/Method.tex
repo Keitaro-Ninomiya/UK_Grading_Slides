@@ -1,0 +1,93 @@
+\begin{frame}{Research question 1: Estimating the impact of method change on grade assignments}
+\begin{itemize}
+    \item Linear probability model at the student level.
+\begin{equation*}
+    A_{i,j,t} = \beta \text{Method}_{t}+\delta GCSE_{i,t-2}+\iota_j+\epsilon_{i,j,t}
+\end{equation*}
+    $A_{i,t}$: Final grade of student $i$ at time $t$.
+
+    $Method_{t}$: Teacher based grade assignment.
+    
+    $X_{i,t}$:Characteristics of student in secondary school at time $t$.
+
+    $GCSE_{i,t}$: Result of past qualification.
+    
+    $\iota_j$: Secondary School Fixed Effect.
+
+    \
+
+    \item I then investigate the secondary school attributes associated with higher grade inflation: Private or Public schools, demographics of students, etc.
+    \begin{equation*}
+        A_{i,j,t} = \beta_z \text{Method}_{t}*Z_{j}+\delta GCSE_{i,t-2}+\iota_j+\epsilon_{i,j,t}
+    \end{equation*}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Research question 2: Estimating the impact of method change on university diversity}
+\begin{itemize}
+    \item Linear regression at university program level.
+\begin{equation*}
+    Y_{j,t} = \beta (\sum_k Inflation_{k,j}) * Rank_j + \iota_j+ \epsilon_{i,j,t}
+\end{equation*}
+    $Y_{i,t}$: Proportion of x$\in \{\text{Low Income students, Non-white students, Private school students}\}$.
+
+    $Inflation_{k,j}$: Grade inflation indicator for student $k$ progressing to university program $j$.
+
+    $Rank_j$: Tier group of university.
+    
+    $\iota_j$: University fixed effect.
+
+    \
+
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Research Question 3: Estimating the effect on student placement}
+    \begin{itemize}
+        \item Modelling College choice at secondary school level.
+        \begin{equation}
+            U(x_{i,j}) = \theta x_{i,j}+\upsilon_{i,j}
+        \end{equation}
+
+        \begin{equation}
+            B(\Tilde{A}_{i}) = \{Uni \ \text{s.t.} \Tilde{A_{i}}\leq Requirement(Uni)\}
+        \end{equation}
+        
+        \begin{equation}
+            P_{i,j}|\Tilde{A}_{i}=\frac{e^{\theta^{\prime} x_{i,j}}}{\sum_j e^{\theta^{\prime} x_{i,j}}}
+        \end{equation}
+
+        \begin{enumerate}
+            \item $x_{i,j}$: Attributes of secondary school $i$ and university $j$.
+
+            e.g. Ranking of university programs, distance between university and secondary school.
+
+            \item $B(\Tilde{A}_{i})$: Applicable set of universities.
+
+            \item $\Tilde{A}_{i}$: Predicted Grades.
+
+            \item $P_{i,j}|\Tilde{A}_{i}$: Choice probability given predicted grades.
+        \end{enumerate}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Research Question 4 + 5}
+    \begin{itemize}
+        \item Performance of students in universities.
+        \begin{itemize}
+            \item I compare student outcomes (e.g. Honors) between demographic bodies of students.
+
+            \item Requires matching with university performance data.
+        \end{itemize}
+
+        \
+
+        \item School Marks and Final Grades.
+        \begin{itemize}
+            \item I document the attributes of internal student marks at secondary school on the final A-levels outcome.
+
+            \item Requires matching with pupils performance data.
+        \end{itemize}
+
+    \end{itemize}
+\end{frame}
